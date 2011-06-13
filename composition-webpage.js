@@ -37,12 +37,12 @@ var height = window.innerHeight;
 var w3 = Math.round(width/3);
 var h3 = Math.round(height/3);
 
-    var canvas=document.createElement("canvas");
+var canvas=document.createElement("canvas");
     if(!canvas.getContext){return false;}
-    canvas.setAttribute('height', height);
-    canvas.setAttribute('width', width);
+canvas.setAttribute('height', height);
+canvas.setAttribute('width', width);
 
-    canvas.style.cssText = 'position: absolute;' + 'top: 0;' + 'left: 0;' + 'z-index: 100;';
+canvas.style.cssText = 'position: absolute;' + 'top: 0;' + 'left: 0;' + 'z-index: 255;';
     document.body.appendChild(canvas);
 
 
