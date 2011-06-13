@@ -42,7 +42,7 @@ var canvas=document.createElement("canvas");
 canvas.setAttribute('height', height);
 canvas.setAttribute('width', width);
 
-canvas.style.cssText = 'position: absolute;' + 'top: 0;' + 'left: 0;' + 'z-index: 255;';
+canvas.style.cssText = 'position: fixed;' + 'top: 0;' + 'left: 0;' + 'z-index: 255;';
 document.body.appendChild(canvas);
 
 
