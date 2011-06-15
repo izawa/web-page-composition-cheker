@@ -29,20 +29,29 @@ ctx.stroke();
 
 }
 
-(
-function () {
+
+function composition () {
+
 var width = window.innerWidth;
 var height = window.innerHeight;
 
 var w3 = Math.round(width/3);
 var h3 = Math.round(height/3);
 
+re = document.getElementById("canvas");
+
+if(re) {
+	document.body.removeChild(re);
+}
+
+
 var canvas=document.createElement("canvas");
     if(!canvas.getContext){return false;}
+canvas.id='canvas';	
 canvas.setAttribute('height', height);
 canvas.setAttribute('width', width);
 
-canvas.style.cssText = 'position: fixed;' + 'top: 0;' + 'left: 0;' + 'z-index: 255;';
+canvas.style.cssText = 'position: fixed;' + 'top: 0;' + 'left: 0;' + 'z-index: 999;';
 document.body.appendChild(canvas);
 
 
@@ -131,6 +140,13 @@ makespot(0,0,width,height,0,height,wparam,0,ctx);
 makespot(0,0,width,height,width,0,width-wparam,height,ctx);
 makespot(0,height,width,0,0,0,wparam,height,ctx);
 makespot(0,height,width,0,width,height,width-wparam,0,ctx);
+}
+
+
+(
+function () {
+composition();
+window.onresize = composition;
 }
 )();
 
