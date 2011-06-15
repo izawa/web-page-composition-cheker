@@ -142,11 +142,17 @@ makespot(0,height,width,0,0,0,wparam,height,ctx);
 makespot(0,height,width,0,width,height,width-wparam,0,ctx);
 }
 
+function myaddevent(eventname, fc){
+if(window.addEventListener){ window.addEventListener(eventname, fc, false); }
+else{ if(window.attachEvent) window.attachEvent('on' + eventname, fc); }
+
+}
+
 
 (
 function () {
 composition();
-window.onresize = composition;
+myaddevent('resize',composition);
 }
 )();
 
