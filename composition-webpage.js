@@ -151,7 +151,6 @@ else{ if(window.attachEvent) window.attachEvent('on' + eventname, fc); }
 
 }
 
-
 composition();
 myaddevent('resize',composition);
 }
