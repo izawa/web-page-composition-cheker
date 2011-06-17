@@ -1,5 +1,8 @@
 javascript:
 
+(
+function () {
+
 function makespot (X1,Y1,X2,Y2,X3,Y3,X4,Y4,ctx) {
 
 var x1 = X1;
@@ -148,9 +151,6 @@ else{ if(window.attachEvent) window.attachEvent('on' + eventname, fc); }
 
 }
 
-
-(
-function () {
 composition();
 myaddevent('resize',composition);
 }
