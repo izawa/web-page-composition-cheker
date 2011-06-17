@@ -1,0 +1,6 @@
+What is it?
+Web page composition indicator bookmarklet
+
+Files
+* composition-webpage.js is original source.
+* minimized.js is compressed bookmarklet.
